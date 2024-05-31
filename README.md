@@ -31,7 +31,22 @@ This code creates an animation effect through audio analysis and interaction, ma
 - Color switching: This code will switch the background color when the volume exceeds the threshold, and other group members may choose other triggering conditions or not switch the background color.
 - Interactive control method: By using buttons to control the playback and pause of music, it adds elements of user interaction.
 
+**Main Code Description**
+- Variable declaration and initialization:
+  - MultiCircles: Stores multiple MultiCircle objects.
+  - MultiCircleNum, innerMultiCircleNum, layerNum: represent the number of multiple circles, the number of inner concentric circles, and the number of outer layers, respectively.
+  - DotSize, dotDensity: Indicates the size and density of points.
+  - Music, analyzer, and level: used to store audio, volume analyzer, and current volume, respectively.
+  - BackgroundColors, BackgroundColorIndex, BackgroundChangeCD: Used to store and switch background colors.
+  - Move: Update the position of multiple circles based on volume and speed values to achieve motion effects.
 
+- P5.js function:
+  - Preload: Load audio files.
+  - Setup: Initialize the canvas, volume analyzer, and multi circle objects.
+  - Draw: Draw function used to draw background color, Polka dot background, obtain volume, switch background color, and so on
+  - DrawPolkaDotBackground: Draw a dot background.
+  - KeyPressed: controls the playback and pause of audio.
+  - WindowResized: Resize the canvas to accommodate changes in the window.
 
 
 
