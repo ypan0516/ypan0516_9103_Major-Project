@@ -13,6 +13,13 @@ In terms of selecting sound clips, I chose the "Fate Symphony" arranged by Beeth
 In this section, I mainly made some changes to the original colors in the group code, such as adjusting the background color to a random Moranti color scheme, to create a higher sense of motion for the new image. In terms of functional setting changes, the main focus is to change the original dot background to a fan-shaped shape, and to change the ellipses (x, y) of those large circles to ellipses (0,0), and then use translate to control their positions. As shown in the image below, the fan-shaped shape changes with the frequency of the sound.
 ![group work changed](readmeimages/Image3.png)
 
+## Instructions on how to interact with works
+By clicking any keyboard button, the playback function can be triggered and waiting for the music to start. The circular pattern of internal rotation will shift and rotate to varying degrees with the frequency of the music, and the background color will also change through the playback of the music. The range of changes is within the range that matches other colors. Different fan-shaped elements will appear above the dots in the background, and as the sound increases, the angle of fan-shaped opening will also increase, similar to the volume display of a music player. 
+User can also pause music by clicking any keyboard button, at which point the circular shape and background color will stop changing, and the fan-shaped shape in the background will disappear, symbolizing the disappearance of volume. This is also consistent with the design of the "cycle" in the concept, which indicates the end of turbulence and a return to the right track.
+![image interaction](readmeimages/image4.gif)
+
+## 
+
 
 
 
