@@ -42,7 +42,6 @@ This code creates an animation effect through audio analysis and interaction, ma
   - velocity: The subset of the move instruction forms a speed threshold and jitter effect, and the speed and position jitter are specified by the size of the sound value. (*Specific learning comes from TikTok's programming teaching*)
   - generateRandomColors: Generate a random color array from allowed colors to generate various different colors in the RGB spectrum. (*The relevant content comes from the stackhoverflow website*)
   
-
 - P5.js function:
   - Preload: Load audio files.
   - Setup: Initialize the canvas, volume analyzer, and multi circle objects.
