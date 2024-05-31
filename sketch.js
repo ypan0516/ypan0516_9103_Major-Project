@@ -184,7 +184,12 @@ function draw() {
     // Set the cooldown to 12 frames
     backgroundChangeCD = 12
   }
+    // Display all multiCircles
+  for (let mc of multiCircles) {
+    mc.move();
+    mc.display();
 
+  }
 }
 
 function drawPolkaDotBackground() {
