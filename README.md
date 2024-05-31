@@ -10,7 +10,9 @@ In terms of selecting sound clips, I chose the "Fate Symphony" arranged by Beeth
 ![Symphony No.5 by Beethoven](readmeimages/Image1.jpg)
 
 ## Change the original group task image
-In this section, I mainly made some changes to the original colors in the group code, such as adjusting the background color to a random Moranti color scheme, to create a higher sense of motion for the new image. 
+In this section, I mainly made some changes to the original colors in the group code, such as adjusting the background color to a random Moranti color scheme, to create a higher sense of motion for the new image. In terms of functional setting changes, the main focus is to change the original dot background to a fan-shaped shape, and to change the ellipses (x, y) of those large circles to ellipses (0,0), and then use translate to control their positions. As shown in the image below, the fan-shaped shape changes with the frequency of the sound.
+![group work changed](readmeimages/Image3.png)
+
 
 
 
