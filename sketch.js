@@ -61,7 +61,7 @@ class MultiCircle {
     let outerRadius = this.innerRadius + this.layerNum * this.dotRadius * 2;
 
     // Draw the background circle with no stroke
-    fill(231, 231, 224);
+    fill(223, 216, 208);
     push();
     translate(this.x, this.y);
 
@@ -105,7 +105,7 @@ class MultiCircle {
 // Realize circular motion (main activity)
 move() {
   // Map a speed value based on the volume
-  let velocity = map(level, 0, 1, 0.01, 50);
+  let velocity = map(level, 0, 1, 0.01, 200);
   // When the volume is less than the threshold, the speed will keep changing randomly, 
   // resulting in a jitter effect (new technique code from tiktok class)
   if (level < 0.02) {
