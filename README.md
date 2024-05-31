@@ -18,7 +18,23 @@ By clicking any keyboard button, the playback function can be triggered and wait
 User can also pause music by clicking any keyboard button, at which point the circular shape and background color will stop changing, and the fan-shaped shape in the background will disappear, symbolizing the disappearance of volume. This is also consistent with the design of the "cycle" in the concept, which indicates the end of turbulence and a return to the right track.
 ![image interaction](readmeimages/image4.gif)
 
-## 
+## Detailed information on animating group code
+This code creates an animation effect through audio analysis and interaction, mainly using the p5.js library to create a multi-layer, rotating, multi-color dot animation, and changes it according to the volume, frequency, and user interaction of the music. 
+
+**Animated attributes and their variations:**
+- Rotation angle and speed: Depending on the volume level, the rotation angle and speed will change. The higher the volume, the faster the rotation speed, and the more significant the angle change.
+- Image scaling: As the volume increases, the image becomes larger, and vice versa. This effect is achieved through the 'scale' function.
+- Color switching: When the volume reaches a certain threshold, the background color will change. By increasing and decreasing the 'backgroundColorIndex'.
+- Motion speed: The volume level affects the speed value. When the volume is low, the image will randomly shake, and when the volume is high, the image will move smoothly according to the speed value.
+
+**Differences from other group members:**
+- Color switching: This code will switch the background color when the volume exceeds the threshold, and other group members may choose other triggering conditions or not switch the background color.
+- Interactive control method: By using buttons to control the playback and pause of music, it adds elements of user interaction.
+
+
+
+
+
 
 
 
