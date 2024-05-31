@@ -175,14 +175,14 @@ function draw() {
   // Get the music volume 
   level = analyzer.getLevel();
   // Determine if the volume is high enough and the cd value for switching colors is less than 0
-  if (level > 0.056 && backgroundChangeCD <= 0) {
+  if (level > 0.067 && backgroundChangeCD <= 0) {
     // Set index value 1 to 0 if it exceeds the range to change the background color
     backgroundColorIndex += 1
     if (backgroundColorIndex >= backgroundColors.length) {
       backgroundColorIndex = 0
     }
-    // Set the cooldown to 8 frames
-    backgroundChangeCD = 8
+    // Set the cooldown to 12 frames
+    backgroundChangeCD = 12
   }
   // Display all multiCircles
   for (let mc of multiCircles) {
