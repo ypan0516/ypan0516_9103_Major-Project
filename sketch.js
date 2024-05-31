@@ -65,13 +65,11 @@ class MultiCircle {
     push();
     translate(this.x, this.y);
 
-
-    // Rotate the graph （added part）
+    // Rotate the shape
     rotate(this.rotateAngle);
-    // Scale the graph according to the volume to achieve the effect of volume change （added part）
+    // Scale the graph according to the volume to achieve the effect of volume change
     scale(0.55 + level * 2)
-    // The speed at which the graphic changes Angle varies according to the volume （added part）
-    this.rotateAngle += this.rotateVelocity * level
+    this.rotateAngle += this.rotateVelocity
     noStroke();
     ellipse(0, 0, outerRadius * 2);
 
