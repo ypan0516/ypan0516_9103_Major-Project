@@ -196,7 +196,7 @@ function draw() {
 
 function drawPolkaDotBackground() {
   // Draw polka dot background
-  // Set the fan Angle based on the volume level
+  // Set the Angle based on the volume level
   let angle = map(level, 0, 1, 0, 360)
   fill(193, 110, 74, 50);
   noStroke();
@@ -211,6 +211,12 @@ function drawPolkaDotBackground() {
   }
 }
 
+// Change the audio playback status when press any key
+function keyPressed() {
+  if (!music.isPlaying()) {
+    music.loop()
+  } 
+}
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
