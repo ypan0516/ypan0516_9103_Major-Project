@@ -149,7 +149,16 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
+// create a new Amplitude analyzer ,this will analyze the volume of the song
+analyzer = new p5.Amplitude();
+// Sets the color array of the background (varies with the frequency of the music)
+backgroundColors = [
+  color(221, 211, 143),
+  color(198, 177, 107),
+  color(124, 167, 195),
+  color(141, 164, 189),
+  color(228, 122, 77),
+];
   // Generate multiCircles at random positions
   for (let i = 0; i < multiCircleNum; i++) {
     let x = random(width);
@@ -160,7 +169,8 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  // Set the background color according to the Background ColorIndex (changed part)
+  background(backgroundColors[backgroundColorIndex]);
   drawPolkaDotBackground();
   
   // Display all multiCircles
