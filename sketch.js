@@ -196,11 +196,17 @@ function draw() {
 
 function drawPolkaDotBackground() {
   // Draw polka dot background
-  fill(193, 110, 74);
+  // Set the fan Angle based on the volume level
+  let angle = map(level, 0, 1, 0, 360)
+  fill(193, 110, 74, 50);
   noStroke();
+  // Loop through to calculate the position of the background dots
   for (let y = 0; y < height; y += dotDensity) {
     for (let x = 0; x < width; x += dotDensity) {
       ellipse(x, y, dotSize);
+      fill(193, 110, 74);
+      // Set arc data and status
+      arc(x, y, dotSize * level * 5 + dotSize, dotSize * level * 5 + dotSize, radians(-90 - angle), radians(-90 + angle))
     }
   }
 }
