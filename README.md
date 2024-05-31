@@ -48,6 +48,17 @@ This code creates an animation effect through audio analysis and interaction, ma
   - KeyPressed: controls the playback and pause of audio.
   - WindowResized: Resize the canvas to accommodate changes in the window.
 
+## Animation inspiration for personal code
+image 1: ![inspiration image1](readmeimages/image5.webp)
+*image reference link: https://stock.adobe.com/au/images/many-clocks-on-wall/71253928*
+The real link to this image is a video of a continuously rotating clock, which inspired my idea to rotate the dots in the originally stationary circle at a uniform speed.
+
+image 2: ![inspiration image2](readmeimages/image6.png)
+*image reference link: https://openprocessing.org/sketch/2241439*
+The operation mode of this image is completely different from my code work, but what inspired me is that it can better fit my design theme by moving the position and angle of the large circular combination, and can also make the image more dynamic with the help of audio by changing the color and flashing mode. 
+
+
+
 
 
 
