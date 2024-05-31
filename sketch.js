@@ -65,12 +65,25 @@ class MultiCircle {
     noStroke();
     ellipse(this.x, this.y, outerRadius * 2);
 
+    // Rotate the graph （added part）
+    rotate(this.rotateAngle);
+    // Scale the graph according to the volume to achieve the effect of volume change （added part）
+    scale(0.55 + level * 2)
+    // The speed at which the graphic changes Angle varies according to the volume （added part）
+    this.rotateAngle += this.rotateVelocity * level
+    noStroke();
+    ellipse(0, 0, outerRadius * 2);
+
     // Draw inner concentric circles
     noFill();
     for (let i = this.innerColors.length - 1; i >= 0; i--) {
       stroke(this.innerColors[i]);
       strokeWeight(5);
-      ellipse(this.x, this.y, this.innerRadius * (i + 1) / this.innerColors.length * 2);
+      ellipse(
+        0,
+        0,
+        ((this.innerRadius * (i + 1)) / this.innerColors.length) * 2
+      );
     }
 
     // Draw outer circle dots
@@ -80,12 +93,58 @@ class MultiCircle {
       let angle = radians(i);
       for (let j = 0; j < this.layerNum; j++) {
         let radius = this.innerRadius + j * this.dotRadius * 2;
-        let x = this.x + cos(angle) * radius;
-        let y = this.y + sin(angle) * radius;
+        let x = cos(angle) * radius;
+        let y = sin(angle) * radius;
         ellipse(x, y, this.dotRadius * 2);
       }
     }
+    pop(); //Restores the previously saved state of the drawing
   }
+
+// Realize circular motion (main activity)
+move() {
+  // Map a speed value based on the volume
+  let velocity = map(level, 0, 1, 0.01, 100);
+  // When the volume is less than the threshold, the speed will keep changing randomly, 
+  // resulting in a jitter effect (new technique code from tiktok class)
+  if (level < 0.02) {
+    this.vx = random(-1, 1);
+    this.vy = random(-1, 1);
+  }
+  // Let the coordinates of the graph vary according to the velocity value and the vx vy of the graph itself
+  this.x = this.x + this.vx * velocity;
+  this.y = this.y + this.vy * velocity;
+    // Make the image bounce back when the coordinates of the image touch the boundary
+  if (this.x > width) {
+    this.vx *= -1;
+    this.x = width;
+  }
+  if (this.x < 0) {
+    this.vx *= -1;
+    this.x = 0;
+  }
+  if (this.y > height) {
+    this.vy *= -1;
+    this.y = height;
+  }
+  if (this.y < 0) {
+    this.vy *= -1;
+    this.y = 0;
+  }
+
+}
+}
+// music-related variables
+let music, analyzer, level;
+// Store an array of background color changes
+let backgroundColors = []
+// Indicates the current background color
+let backgroundColorIndex = 0
+// Indicates the cooldown time of the background switch
+let backgroundChangeCD = 0
+function preload() {
+  // Load the specified audio (Beethoven's Symphony of Destiny)
+  music = loadSound("music.mp3");
 }
 
 function setup() {
