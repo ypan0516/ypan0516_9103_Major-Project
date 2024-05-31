@@ -1,3 +1,4 @@
+// group work code below, change some of them.
 let multiCircles = [];
 let multiCircleNum = 20;// Number of multiCircles
 let innerMultiCircleNum = 10; // Number of inner concentric circles
@@ -10,6 +11,11 @@ class MultiCircle {
   constructor(x, y, maxRadius, innerMultiCircleNum, layerNum) {
     this.x = x;
     this.y = y;
+    // Set the circles and each one will move randomly （Changed part）
+    this.vx = random(-1, 1); //Circular velocity direction
+    this.vy = random(-1, 1); //Circular velocity direction
+    this.rotateAngle = 0 // Current Angle
+    this.rotateVelocity = random(-2, 2) // Angle of rotation speed
     this.maxRadius = maxRadius;
     this.innerMultiCircleNum = innerMultiCircleNum;
     this.layerNum = layerNum;
