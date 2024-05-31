@@ -33,12 +33,15 @@ This code creates an animation effect through audio analysis and interaction, ma
 
 **Main Code Description**
 - Variable declaration and initialization:
-  - MultiCircles: Stores multiple MultiCircle objects.
+  - MultiCircles: Stores multiple MultiCircle objects. (*The relevant content comes from the stackhoverflow website*)
   - MultiCircleNum, innerMultiCircleNum, layerNum: represent the number of multiple circles, the number of inner concentric circles, and the number of outer layers, respectively.
   - DotSize, dotDensity: Indicates the size and density of points.
   - Music, analyzer, and level: used to store audio, volume analyzer, and current volume, respectively.
   - BackgroundColors, BackgroundColorIndex, BackgroundChangeCD: Used to store and switch background colors.
   - Move: Update the position of multiple circles based on volume and speed values to achieve motion effects.
+  - velocity: The subset of the move instruction forms a speed threshold and jitter effect, and the speed and position jitter are specified by the size of the sound value. (*Specific learning comes from TikTok's programming teaching*)
+  - generateRandomColors: Generate a random color array from allowed colors to generate various different colors in the RGB spectrum. (*The relevant content comes from the stackhoverflow website*)
+  
 
 - P5.js function:
   - Preload: Load audio files.
