@@ -62,8 +62,9 @@ class MultiCircle {
 
     // Draw the background circle with no stroke
     fill(231, 231, 224);
-    noStroke();
-    ellipse(this.x, this.y, outerRadius * 2);
+    push();
+    translate(this.x, this.y);
+
 
     // Rotate the graph （added part）
     rotate(this.rotateAngle);
@@ -89,7 +90,7 @@ class MultiCircle {
     // Draw outer circle dots
     fill(this.outerColor);
     noStroke();
-    for (let i = 0; i < 360; i += 10) {
+    for (let i = 0; i < 360; i += 15) {
       let angle = radians(i);
       for (let j = 0; j < this.layerNum; j++) {
         let radius = this.innerRadius + j * this.dotRadius * 2;
@@ -104,7 +105,7 @@ class MultiCircle {
 // Realize circular motion (main activity)
 move() {
   // Map a speed value based on the volume
-  let velocity = map(level, 0, 1, 0.01, 100);
+  let velocity = map(level, 0, 1, 0.01, 50);
   // When the volume is less than the threshold, the speed will keep changing randomly, 
   // resulting in a jitter effect (new technique code from tiktok class)
   if (level < 0.02) {
@@ -184,11 +185,12 @@ function draw() {
     // Set the cooldown to 12 frames
     backgroundChangeCD = 12
   }
+  // Reduce cooldown time
+  backgroundChangeCD -= 1
     // Display all multiCircles
   for (let mc of multiCircles) {
     mc.move();
     mc.display();
-
   }
 }
 
