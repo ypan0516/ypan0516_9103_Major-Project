@@ -6,5 +6,6 @@ Firstly, I reconstructed the conceptual framework of this image design by changi
 
 In terms of selecting sound clips, I chose the "Fate Symphony" arranged by Beethoven, which is consistent with the image style and design concept of this project. The rhythm and sound curve of this piece have the characteristic of ups and downs, which can create more visual changes.
 
-![Symphony No.5 by Beethoven](readmeimages/SymphonyNo5.jpg)
+![Symphony No.5 by Beethoven](readmeimages/Image1.jpg)
+
 
