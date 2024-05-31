@@ -215,7 +215,9 @@ function drawPolkaDotBackground() {
 function keyPressed() {
   if (!music.isPlaying()) {
     music.loop()
-  } 
+  } else {
+    music.pause()
+  }
 }
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
